@@ -2,6 +2,8 @@
 
 These dotfiles are an opinionated set of configurations, features, preferences, settings, etc for Mac OS and Linux that make my life in front of the keyboard just a little be easier.
 
+dotfiles are like a developer's toolbox.
+
 Feel free to clone, modify, share, and use this dotfiles as your own.
 
 
