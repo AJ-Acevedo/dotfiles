@@ -9,3 +9,5 @@ export PATH="/usr/local/bin:$PATH"
 export EDITOR='mate -w'
 
 source $ZSH/oh-my-zsh.sh
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
