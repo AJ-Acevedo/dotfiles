@@ -1,7 +1,24 @@
 require 'rake'
 require 'erb'
+require 'rbconfig'
+ 
 
-desc "install the dotfiles into user's home directory"
+# Verify if host OS is either Mac or Linux, else exit
+@os = RbConfig::CONFIG['host_os']
+
+case
+when @os.downcase.include?('linux')
+  @os = 'linux'
+when @os.downcase.include?('darwin')
+  @os = 'darwin'
+else
+  puts 'Mac OS X and Linux are the only supported platforms.'
+  puts 'exiting...'
+  exit
+end
+
+# Start the dotfiles installation
+desc "Setting up dotfiles in user's home directory"
 task :install do
   install_oh_my_zsh
   switch_to_zsh
