@@ -8,14 +8,20 @@
 [credential]
   helper = osxkeychain
 [alias]
+  aa = !git branch && git add . && git status
+  ba = branch -a
+  bd = branch -D
+  br = branch
   ci = commit
   co = checkout
-  br = branch
-  df = diff
+  dc = diff --cached
+  df = diff HEAD
+  lg1 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+  lg = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(bold white)— %an%C(reset)' --abbrev-commit
   pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
+  rp = remote prune
+  ru = remote update
   st = status
-  lg = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
-  lg1 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(bold white)— %an%C(reset)' --abbrev-commit
 [apply]
   whitespace = nowarn
 [format]
