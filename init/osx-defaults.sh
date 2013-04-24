@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # This is a customized version of ~/.osx — http://mths.be/osx
 # Checkout http://secrets.blacktree.com for a extensive list of defaults
@@ -479,11 +479,17 @@ defaults write org.m0k.transmission WarningDonate -bool false
 defaults write org.m0k.transmission WarningLegal -bool false
 
 ###############################################################################
-# MISC                                                                        #
+# TextMate                                                                    #
 ###############################################################################
 
-# TextMate - Enable Font Smoothing
+# Enable Font Smoothing
 defaults write com.macromates.TextMate.preview fontSmoothing 1
+
+# Set font size to 13
+defaults write com.macromates.textmate OakTextViewNormalFontSize -int 13
+
+# Set font to Monaco
+defaults write com.macromates.textmate OakTextViewNormalFontName -string "Monaco"
 
 
 echo "Done. Restart/logout to apply these changes."
