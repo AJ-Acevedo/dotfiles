@@ -106,6 +106,9 @@ defaults write com.apple.menuextra.clock DateFormat -string "EEE MMM d h:mm"
 defaults write com.apple.menuextra.clock FlashDateSeparators -bool true
 defaults write com.apple.menuextra.clock IsAnalog -bool false
 
+# Only show Displays, Airport, Battery, and clock in Menu bar
+defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Displays.menu" "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/Battery.menu" "/System/Library/CoreServices/Menu Extras/Clock.menu"
+
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
