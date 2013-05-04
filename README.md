@@ -14,7 +14,7 @@ For more information on dotfiles, checkout [dotfiles.github.io](http://dotfiles.
 Run the following commands in your terminal. It will prompt you before it does anything destructive. Check out the [Rakefile](https://github.com/aj-acevedo/dotfiles/blob/custom-bash-zsh/Rakefile) to see exactly what it does.
 
 ```terminal
-git clone git://github.com/aj-acevedo/dotfiles ~/.dotfiles
+git clone git://github.com/aj-acevedo/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 rake install
 ```
