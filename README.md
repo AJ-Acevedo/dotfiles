@@ -4,7 +4,9 @@ These dotfiles are a set of configuration files for Mac OS X and Linux, that mak
 
 dotfiles are like a developer's toolbox.
 
-I'm using [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) and a fork of  [ryanb/dotfiles](https://github.com/ryanb/dotfiles)
+I am using Mac OS X 10.9 and my preferred Linux distribution is Debian.  
+Currently running Debian 7.1 (wheezy)
+
 
 For more information on dotfiles, checkout [dotfiles.github.io](http://dotfiles.github.io/)
 
@@ -29,20 +31,20 @@ TODO: ...
 
 ## Uninstall
 
-To remove the dotfile configs, run the following commands. Be certain to double check the contents of the files before removing so you don't lose custom settings.
+To remove the dotfile configs, run the following commands.  
+Be certain to double check the contents of the files before removing so you don't lose custom settings.
 
 ```
-unlink ~/.gitignore
-unlink ~/.gemrc
-unlink ~/.irbrc
-unlink ~/.railsrc
-unlink ~/.vim
-unlink ~/.vimrc
-rm ~/.zshrc # careful here
-rm ~/.gitconfig
-rm -rf ~/.dotfiles
-rm -rf ~/.oh-my-zsh
-chsh -s /bin/bash # change back to Bash if you want
+unlink ~/.bash_profile  
+unlink ~/.bashrc  
+unlink ~/.gemrc  
+unlink ~/.gitignore  
+unlink ~/.irbrc  
+unlink ~/.railsrc  
+unlink ~/.vim  
+unlink ~/.vimrc  
+rm ~/.gitconfig  
+rm -rf ~/.dotfiles  
 ```
 
 Then open a new terminal window to see the changes take effect.
