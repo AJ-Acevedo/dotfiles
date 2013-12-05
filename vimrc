@@ -1,7 +1,7 @@
-" AJA Custom Vim Settings
+" AJAlabs Custom Vim Settings
 
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
+" Use Vim settings, rather then Vi settings
+" This must be first, because it changes other options as a side effect
 set nocompatible
 
 " Set utf8 as standard encoding and en_US as the standard language
@@ -9,13 +9,13 @@ set encoding=utf8
 
 set nobackup
 set nowritebackup
-set showcmd" display inco   mplete commands
-set incsearch" do incremental searching
+set showcmd		" display incomplete commands
+set incsearch		" do incremental searching
 
-" keep 100 l    ines of command line history
+" keep 100 lines of command line history
 set history=100
 
-" Turn Syntax Highliting on
+" Turn Syntax Highlighting on
 syntax on
 
 " Switch wrap off for everything
