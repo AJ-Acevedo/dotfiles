@@ -21,7 +21,7 @@ end
 desc "Setting up dotfiles in user's home directory"
 task :install do
   replace_all = false
-  files = Dir['*'] - %w[Rakefile README.md LICENSE.md TODO.md init]
+  files = Dir['*'] - %w[config init LICENSE.md Rakefile README.md]
   files.each do |file|
     system %Q{mkdir -p "$HOME/.#{File.dirname(file)}"} if file =~ /\//
     if File.exist?(File.join(ENV['HOME'], ".#{file.sub(/\.erb$/, '')}"))
@@ -47,6 +47,11 @@ task :install do
       link_file(file)
     end
   end
+  source_files
+end
+
+task :source do
+  source_files
 end
 
 def replace_file(file)
@@ -60,11 +65,15 @@ def link_file(file)
     File.open(File.join(ENV['HOME'], ".#{file.sub(/\.erb$/, '')}"), 'w') do |new_file|
       new_file.write ERB.new(File.read(file)).result(binding)
     end
-  elsif file =~ /bashrc$/ # copy bashrc instead of creating link
-    puts "copying ~/.#{file}"
-    system %Q{cp "$PWD/#{file}" "$HOME/.#{file}"}
   else
     puts "linking ~/.#{file}"
     system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
   end
+end
+
+def source_files
+  system %Q{
+    source $HOME/.bash_profile
+    vim -S $HOME/.vimrc -c 'q'
+  }
 end
