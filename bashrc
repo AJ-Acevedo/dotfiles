@@ -23,6 +23,7 @@ alias gm='git merge --no-ff'
 alias gs='git status'
 alias ls='ls -alh'
 alias mb='mv'
+alias tocuh='touch'
 
 alias sshaja="ssh -R 52698:localhost:52698 ajalabs.com"
 alias socksaja="ssh -D 1717 ajalabs.com"
