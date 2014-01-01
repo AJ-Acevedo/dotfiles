@@ -76,4 +76,5 @@ def source_files
     source $HOME/.bash_profile
     vim -S $HOME/.vimrc -c 'q'
   }
+  puts 'Sourced bash and vim'
 end
