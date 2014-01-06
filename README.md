@@ -13,7 +13,7 @@ For more information on dotfiles, checkout [dotfiles.github.io](http://dotfiles.
 
 ## Installation
 
-Run the following commands in your terminal. It will prompt you before it does anything destructive. Check out the [Rakefile](https://github.com/aj-acevedo/dotfiles/blob/custom-bash-zsh/Rakefile) to see exactly what it does.
+Run the following commands in your terminal. It will prompt you before it does anything destructive. Check out the [Rakefile](https://github.com/AJ-Acevedo/dotfiles/blob/master/Rakefile) to see exactly what it does.
 
 ```terminal
 git clone git://github.com/aj-acevedo/dotfiles.git ~/.dotfiles
