@@ -55,6 +55,7 @@ export LSCOLORS=dxfxcxdxbxegedabagacad
 source ~/.dotfiles/config/git-prompt.sh
 PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
+
 #-------------------------------------------------------------
 # TextMate
 #-------------------------------------------------------------
@@ -65,7 +66,7 @@ export EDITOR="$HOME/bin/mate -w"
 # TAB Auto-Completion
 #-------------------------------------------------------------
 
-# Grunt JS -  requires grunt to be instaled globally with
+# Grunt JS -  requires grunt to be installed globally with
 # npm install -g grunt
 eval "$(grunt --completion=bash)"
 
@@ -85,3 +86,9 @@ export PATH=$PATH:$HOME/bin
 
 # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/.rvm/bin
+
+
+#-------------------------------------------------------------
+# Environments
+#-------------------------------------------------------------
+export NODE_ENV=development
