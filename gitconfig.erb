@@ -3,7 +3,6 @@
   email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
 [core]
   autocrlf = input
-  editor = mate -w
   excludesfile = <%= ENV['HOME'] %>/.gitignore
 [credential]
   helper = osxkeychain
@@ -47,5 +46,6 @@
   tool = vimdiff
 [push]
   default = simple
-[web]
-  browser = firefox
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f

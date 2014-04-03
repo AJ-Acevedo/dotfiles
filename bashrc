@@ -23,6 +23,7 @@ alias gm='git merge --no-ff'
 alias gs='git status'
 alias ls='ls -alh'
 alias mb='mv'
+alias .s='source ~/.bashrc'
 alias tocuh='touch'
 
 alias sshaja="ssh -R 52698:localhost:52698 ajalabs.com"
@@ -36,7 +37,8 @@ alias socksaja="ssh -D 1717 ajalabs.com"
 export HISTCONTROL=erasedups
 #Set History Size
 export HISTSIZE=50000
-#Append to bash_history if Terminal.app quits
+
+#Append to bash_history and do not overwrite
 shopt -s histappend
 
 
@@ -57,7 +59,13 @@ PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
 
 #-------------------------------------------------------------
-# TextMate
+# Set shell window and tab title to the current directory
+#-------------------------------------------------------------
+
+#PROMPT_COMMAND='echo -n -e "\033]0;`basename $PWD`\007"'
+
+#-------------------------------------------------------------
+# Set default Editor to TextMate
 #-------------------------------------------------------------
 export EDITOR="$HOME/bin/mate -w"
 
@@ -92,3 +100,39 @@ PATH=$PATH:$HOME/.rvm/bin
 # Environments
 #-------------------------------------------------------------
 export NODE_ENV=development
+
+
+##############################################################
+# BEGIN - Mac OS X Specific configurations
+##############################################################
+if [ `uname -s` == "Darwin" ]; then
+
+#-------------------------------------------------------------
+# Set default Editor to TextMate
+#-------------------------------------------------------------
+export EDITOR="$HOME/bin/mate -w"
+export GIT_EDITOR="$HOME/bin/mate -w"
+export VISUAL="$HOME/bin/mate -w"
+
+fi
+##############################################################
+# END - Mac OS X Specific configurations
+##############################################################
+
+
+##############################################################
+# BEGIN - Linux Specific configurations
+##############################################################
+if [ `uname -s` == "Linux" ]; then
+
+#-------------------------------------------------------------
+# Set default Editor to vi
+#-------------------------------------------------------------
+export EDITOR=vim
+export GIT_EDITOR=vim
+export VISUAL=vim
+
+fi
+##############################################################
+# END - Linux Specific configurations
+##############################################################
