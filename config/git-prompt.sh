@@ -1,5 +1,27 @@
 # bash/zsh git prompt support
 #
+# THIS IS A MODIFIED VERSION of the git-prompt.sh
+# AJ Acevedo | http://ajacevedo.com
+#
+# Replacing the unstaged (*), staged (+), and untracked (%) with
+# colored circles (●) for bash. Yellow for unstaged, green for staged, and
+# red for untracked changes.
+# The following changes my cause some unexpected behavior if GIT_PS1_SHOWCOLORHINTS
+# is enabled.
+#
+# Modified line 410:50 - Adds a yellow circle (●) to the PS1 for unstaged changes
+# FROM: w="*"
+# TO:   w="\[\033[33m\]●"
+#
+# Modified line 412:48 - Adds a green circle (●) to the PS1 for staged changes
+# FROM: i="+"
+# TO:   i="\[\033[32m\]●"
+#
+# Modified line 426:4 - Adds a red circle (●) to the PS1 for untracked changes
+# FROM: u="%${ZSH_VERSION+%}"
+# TO:   u="\[\033[31m\]●\[\033[0m\]${ZSH_VERSION+%}"
+#
+#
 # Copyright (C) 2006,2007 Shawn O. Pearce <spearce@spearce.org>
 # Distributed under the GNU General Public License, version 2.0.
 #
@@ -407,9 +429,9 @@ __git_ps1 ()
 		if [ -n "${GIT_PS1_SHOWDIRTYSTATE-}" ] &&
 		   [ "$(git config --bool bash.showDirtyState)" != "false" ]
 		then
-			git diff --no-ext-diff --quiet --exit-code || w="*"
+			git diff --no-ext-diff --quiet --exit-code || w="\[\033[33m\]●\[\033[0m\]"
 			if [ -n "$short_sha" ]; then
-				git diff-index --cached --quiet HEAD -- || i="+"
+				git diff-index --cached --quiet HEAD -- || i="\[\033[32m\]●\[\033[0m\]"
 			else
 				i="#"
 			fi
@@ -423,7 +445,7 @@ __git_ps1 ()
 		   [ "$(git config --bool bash.showUntrackedFiles)" != "false" ] &&
 		   git ls-files --others --exclude-standard --error-unmatch -- '*' >/dev/null 2>/dev/null
 		then
-			u="%${ZSH_VERSION+%}"
+			u="\[\033[31m\]●\[\033[0m\]${ZSH_VERSION+%}"
 		fi
 
 		if [ -n "${GIT_PS1_SHOWUPSTREAM-}" ]; then

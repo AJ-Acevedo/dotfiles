@@ -13,6 +13,7 @@ fi
 #-------------------------------------------------------------
 # aliases
 #-------------------------------------------------------------
+alias ..1='cd ../'
 alias ..2='cd ../../'
 alias ..3='cd ../../../'
 alias ..4='cd ../../../../'
@@ -50,24 +51,16 @@ export LSCOLORS=dxfxcxdxbxegedabagacad
 
 
 #-------------------------------------------------------------
-# PS1 PROMPT
+# PS1 PROMPT 'user@hostname cwd (git_branch • )$ '
 #-------------------------------------------------------------
 
-# Git repository status in the CLI PROMPT
+# Add Git repo/branch and status to the PS1 PROMPT
 source ~/.dotfiles/config/git-prompt.sh
-PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
+PROMPT_COMMAND='__git_ps1 "\u@\h \W" "\\\$ "'
 
-#-------------------------------------------------------------
-# Set shell window and tab title to the current directory
-#-------------------------------------------------------------
-
-#PROMPT_COMMAND='echo -n -e "\033]0;`basename $PWD`\007"'
-
-#-------------------------------------------------------------
-# Set default Editor to TextMate
-#-------------------------------------------------------------
-export EDITOR="$HOME/bin/mate -w"
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
 
 
 #-------------------------------------------------------------
