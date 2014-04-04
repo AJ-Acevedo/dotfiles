@@ -57,7 +57,9 @@ export LSCOLORS=dxfxcxdxbxegedabagacad
 # Add Git repo/branch and status to the PS1 PROMPT
 source ~/.dotfiles/config/git-prompt.sh
 
-PROMPT_COMMAND='__git_ps1 "\u@\h \W" "\\\$ "'
+# echo -n -e "\033]0;`basename $PWD`\007" Adds the cwd to the shell window and tab
+PROMPT_COMMAND='__git_ps1 "\u@\h \W" "\\\$ ";echo -n -e "\033]0;`basename $PWD`\007"'
+echo -n -e "\033]0;`basename $PWD`\007"
 
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
