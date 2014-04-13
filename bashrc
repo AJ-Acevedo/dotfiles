@@ -38,6 +38,7 @@ alias socksaja="ssh -D 1717 ajalabs.com"
 export HISTCONTROL=erasedups
 #Set History Size
 export HISTSIZE=50000
+export HISTCONTROL=ignorespace
 
 #Append to bash_history and do not overwrite
 shopt -s histappend
