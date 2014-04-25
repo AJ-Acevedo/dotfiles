@@ -24,6 +24,17 @@ rake install
 After the installation completes, open a new terminal window to see the changes take effect.
 
 
+## Updating VIM plugins
+
+To update the VIM plug-ins run the following commands from the .dotfiles root directory
+
+```curl -Sso ~/.vim/autoload/pathogen.vim \
+    https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+```
+
+`git submodule foreach git pull origin master`
+
+
 ## Features
 
 - Tab auto-completion for Git and Grunt JS
