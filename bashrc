@@ -82,7 +82,7 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true
 
 # Grunt JS -  requires grunt to be installed globally with
 # npm install -g grunt
-eval "$(grunt --completion=bash)"
+[[ -s "$HOME/.npm/grunt" ]] && eval "$(grunt --completion=bash)"
 
 # Git
 source ~/.dotfiles/config/git-completion.sh

@@ -24,15 +24,20 @@ rake install
 After the installation completes, open a new terminal window to see the changes take effect.
 
 
-## Updating VIM plugins
+## Updating and adding VIM plugins
 
 To update the VIM plug-ins run the following commands from the .dotfiles root directory
 
-```curl -Sso ~/.vim/autoload/pathogen.vim \
+```
+curl -Sso ~/.vim/autoload/pathogen.vim \
     https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 ```
 
 `git submodule foreach git pull origin master`
+
+When adding new VIM plug-ins, be sure to add them as git submodules
+
+`git submodule add git@github.com:scrooloose/nerdtree.git`
 
 
 ## Features
