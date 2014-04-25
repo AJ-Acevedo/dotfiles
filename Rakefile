@@ -1,9 +1,9 @@
 require 'rake'
 require 'erb'
 require 'rbconfig'
- 
 
-# Verify if host OS is either Mac or Linux, else exit
+
+# Verify if host OS is either Mac or Linux, otherwise exit
 @os = RbConfig::CONFIG['host_os']
 
 case

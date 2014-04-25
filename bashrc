@@ -82,7 +82,10 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true
 
 # Grunt JS -  requires grunt to be installed globally with
 # npm install -g grunt
-[[ -s "$HOME/.npm/grunt" ]] && eval "$(grunt --completion=bash)"
+[[ -r "$HOME/.npm/grunt" ]] && eval "$(grunt --completion=bash)"
+
+# RVM - Requires RVM to be installed
+[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 
 # Git
 source ~/.dotfiles/config/git-completion.sh

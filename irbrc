@@ -1,4 +1,5 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
+
 require 'irb/completion'
 require 'irb/ext/save-history'
 
