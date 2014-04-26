@@ -6,8 +6,8 @@
 # Ignore bashrc for non-interactive shells
 #-------------------------------------------------------------
 
-if [[ $- != *i* ]]; then 
-  return; 
+if [[ $- != *i* ]]; then
+  return;
 fi
 
 
@@ -55,13 +55,6 @@ shopt -s histappend
 
 
 #-------------------------------------------------------------
-# CLI COLOR
-#-------------------------------------------------------------
-export CLICOLOR=1
-export LSCOLORS=dxfxcxdxbxegedabagacad
-
-
-#-------------------------------------------------------------
 # PS1 PROMPT 'user@hostname cwd (git_branch • )$ '
 #-------------------------------------------------------------
 
@@ -74,6 +67,20 @@ echo -n -e "\033]0;`basename $PWD`\007"
 
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
+
+
+#-------------------------------------------------------------
+# PATHS
+#-------------------------------------------------------------
+
+# Prepend Homebrew's PATH before $PATH
+export PATH="/usr/local/bin:$PATH"
+
+# Add ~/bin
+export PATH=$PATH:$HOME/bin
+
+# Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin
 
 
 #-------------------------------------------------------------
@@ -92,23 +99,17 @@ source ~/.dotfiles/config/git-completion.sh
 
 
 #-------------------------------------------------------------
-# PATHS
-#-------------------------------------------------------------
-
-# Prepend Homebrew's PATH before $PATH
-export PATH="/usr/local/bin:$PATH"
-
-# Add ~/bin
-export PATH=$PATH:$HOME/bin
-
-# Add RVM to PATH for scripting
-PATH=$PATH:$HOME/.rvm/bin
-
-
-#-------------------------------------------------------------
 # Environments
 #-------------------------------------------------------------
 export NODE_ENV=development
+
+
+#-------------------------------------------------------------
+# RVM - Ruby Version Manager
+#-------------------------------------------------------------
+
+# Load RVM into a shell session *as a function* if it exists
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 
 ##############################################################
@@ -122,6 +123,12 @@ if [ `uname -s` == "Darwin" ]; then
 export EDITOR="$HOME/bin/mate -w"
 export GIT_EDITOR="$HOME/bin/mate -w"
 export VISUAL="$HOME/bin/mate -w"
+
+#-------------------------------------------------------------
+# CLI COLOR
+#-------------------------------------------------------------
+export CLICOLOR=1
+export LSCOLORS=gxcxfxdxbxegedabagDxad
 
 fi
 ##############################################################
@@ -140,6 +147,13 @@ if [ `uname -s` == "Linux" ]; then
 export EDITOR=vim
 export GIT_EDITOR=vim
 export VISUAL=vim
+
+
+#-------------------------------------------------------------
+# CLI COLOR
+#-------------------------------------------------------------
+export CLICOLOR=1
+export LS_COLORS='di=36:ln=32:so=35:pi=33:ex=31:or=31;5'
 
 fi
 ##############################################################

@@ -40,6 +40,9 @@ set softtabstop=2
 " Always show current position
 set ruler
 
+" Enable mouse use in all modes
+set mouse=a
+
 " Ignore case when searching unless mixed case expressions
 set ignorecase
 set smartcase

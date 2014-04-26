@@ -2,7 +2,6 @@ require 'rake'
 require 'erb'
 require 'rbconfig'
 
-
 # Verify if host OS is either Mac or Linux, otherwise exit
 @os = RbConfig::CONFIG['host_os']
 
@@ -47,13 +46,21 @@ task :install do
       link_file(file)
     end
   end
+  make_bin
   source_files
 end
+
+task :default => [:install]
 
 task :source do
   source_files
 end
 
+task :make_bin do
+  make_bin
+end
+
+# Methods
 def replace_file(file)
   system %Q{rm -rf "$HOME/.#{file.sub(/\.erb$/, '')}"}
   link_file(file)
@@ -69,6 +76,11 @@ def link_file(file)
     puts "linking ~/.#{file}"
     system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
   end
+end
+
+def make_bin
+  # Add ~/bin if it does not already exist
+  system %Q{mkdir -p $HOME/bin}
 end
 
 def source_files
