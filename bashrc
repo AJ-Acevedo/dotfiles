@@ -21,6 +21,15 @@ fi
 
 
 #-------------------------------------------------------------
+# Source private bash definitions (if any)
+#-------------------------------------------------------------
+
+if [ -f ~/.bash_private ]; then
+     source ~/.bash_private
+fi
+
+
+#-------------------------------------------------------------
 # aliases
 #-------------------------------------------------------------
 alias ..1='cd ../'
@@ -36,10 +45,6 @@ alias ls='ls -alh'
 alias mb='mv'
 alias .s='source ~/.bashrc'
 alias tocuh='touch'
-
-alias sshaja="ssh -R 52698:localhost:52698 ajalabs.com"
-alias socksaja="ssh -D 1717 ajalabs.com"
-
 
 #-------------------------------------------------------------
 # History
