@@ -80,6 +80,7 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true
 
 # Prepend Homebrew's PATH before $PATH
 export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 
 # Add ~/bin
 export PATH=$PATH:$HOME/bin
