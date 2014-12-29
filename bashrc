@@ -79,14 +79,16 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true
 #-------------------------------------------------------------
 
 # Prepend Homebrew's PATH before $PATH
-export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 # Add ~/bin
 export PATH=$PATH:$HOME/bin
 
 # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/.rvm/bin
+
+# Clean up duplicates in $PATH and remove trailing :
+PATH=$(echo -n $PATH | awk -v RS=: -v ORS=: '!x[$0]++' | sed "s/\(.*\).\{1\}/\1/")
 
 
 #-------------------------------------------------------------
