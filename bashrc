@@ -88,8 +88,7 @@ export PATH=$PATH:$HOME/bin
 PATH=$PATH:$HOME/.rvm/bin
 
 # Clean up duplicates in $PATH and remove trailing :
-PATH=$(echo -n $PATH | awk -v RS=: -v ORS=: '!x[$0]++' | sed "s/\(.*\).\{1\}/\1/")
-
+PATH=$(echo -n $PATH | awk -v RS=: -v ORS=: '!($0 in a) {a[$0]; print}' | sed "s/\(.*\).\{1\}/\1/")
 
 #-------------------------------------------------------------
 # TAB Auto-Completion
