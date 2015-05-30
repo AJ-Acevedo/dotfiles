@@ -45,6 +45,7 @@ alias ls='ls -alh'
 alias mb='mv'
 alias .s='source ~/.bashrc'
 alias tocuh='touch'
+alias showip='ifconfig | grep "inet" | grep -v 127.0.0.1'
 
 #-------------------------------------------------------------
 # History
