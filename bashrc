@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 # .bashrc
 
+# Author: AJ Acevedo
+# Author URI: http://AJAlabs.com
+# License: MIT
 
 #-------------------------------------------------------------
 # Ignore bashrc for non-interactive shells
@@ -12,20 +15,26 @@ fi
 
 
 #-------------------------------------------------------------
-# Source global definitions (if any)
+# Source global definitions (if any exist)
 #-------------------------------------------------------------
 
+# For Mac OS X
 if [ -f /etc/bashrc ]; then
-      . /etc/bashrc   # --> Read /etc/bashrc, if present.
+  . /etc/bashrc
+fi
+
+# For Debian Linux
+if [ -f /etc/bash.bashrc ]; then
+  . /etc/bash.bashrc
 fi
 
 
 #-------------------------------------------------------------
-# Source private bash definitions (if any)
+# Source private bash definitions (if any exist)
 #-------------------------------------------------------------
 
 if [ -f ~/.bash_private ]; then
-     source ~/.bash_private
+  source ~/.bash_private
 fi
 
 
@@ -47,16 +56,17 @@ alias .s='source ~/.bashrc'
 alias tocuh='touch'
 alias showip='ifconfig | grep "inet" | grep -v 127.0.0.1'
 
+
 #-------------------------------------------------------------
 # History
 #-------------------------------------------------------------
-#Erase Duplicates
-export HISTCONTROL=erasedups
-#Set History Size
-export HISTSIZE=50000
-export HISTCONTROL=ignorespace
+# Ignore duplicates and lines that start with spaces
+export HISTCONTROL=ignoreboth
 
-#Append to bash_history and do not overwrite
+# Set History Size to 50,000 line! Yeah buddy!
+export HISTSIZE=50000
+
+# Append to bash_history and do not overwrite
 shopt -s histappend
 
 
@@ -74,6 +84,12 @@ echo -n -e "\033]0;`basename $PWD`\007"
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 
+#-------------------------------------------------------------
+# MISC
+#-------------------------------------------------------------
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
 
 #-------------------------------------------------------------
 # PATHS
@@ -90,6 +106,7 @@ PATH=$PATH:$HOME/.rvm/bin
 
 # Clean up duplicates in $PATH and remove trailing :
 PATH=$(echo -n $PATH | awk -v RS=: -v ORS=: '!($0 in a) {a[$0]; print}' | sed "s/\(.*\).\{1\}/\1/")
+
 
 #-------------------------------------------------------------
 # TAB Auto-Completion
@@ -164,6 +181,16 @@ export CLICOLOR=1
 export LS_COLORS='di=36:ln=32:so=35:pi=33:ex=31:or=31;5'
 
 fi
+
+#-------------------------------------------------------------
+# NodeJS JavaScript runtime
+#-------------------------------------------------------------
+if which node >/dev/null; then
+  export EXECJS_RUNTIME=node
+else
+  echo "Node is not installed"
+fi
+
 ##############################################################
 # END - Linux Specific configurations
 ##############################################################
