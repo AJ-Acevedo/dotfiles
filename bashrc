@@ -180,17 +180,19 @@ export VISUAL=vim
 export CLICOLOR=1
 export LS_COLORS='di=36:ln=32:so=35:pi=33:ex=31:or=31;5'
 
-fi
 
 #-------------------------------------------------------------
 # NodeJS JavaScript runtime
 #-------------------------------------------------------------
+#TODO: Fix conditional to not use which
 if which node >/dev/null; then
   export EXECJS_RUNTIME=node
 else
   echo "Node is not installed"
 fi
 
+
+fi
 ##############################################################
 # END - Linux Specific configurations
 ##############################################################
