@@ -23,6 +23,8 @@ rake install
 
 After the installation completes, open a new terminal window to see the changes take effect.
 
+NOTE: There are additional installer scripts in the `~/.dotfiles/init` directory that can be run as well. 
+
 
 ## Updating and adding VIM plugins
 
@@ -44,7 +46,7 @@ When adding new VIM plug-ins, be sure to add them as git submodules
 
 - Tab auto-completion for Git and Grunt JS
 - Custom list of git config aliases and configurations
-- Add a Git repo's branch name to the PS1 PROMT with red, yellow and green status indicators:
+- Add a Git repo's branch name to the PS1 prompt with red, yellow and green status indicators:
 'user@hostname cwd (git_branch • )$ '
 - Matching TextMate and vim themes
 - vim customization

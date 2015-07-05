@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #
 # AJAlabs.com
-# brew install script
-# Homebrew installer and updater
+#
+# Homebrew install and updater script
 # v0.2
 #
 # Homebrew
