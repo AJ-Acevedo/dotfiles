@@ -2,8 +2,8 @@
 #
 # AJAlabs.com
 #
-# Mac OS X Defaults
-# v0.3
+# OS X Default - Mavericks 10.9
+# v0.4
 #
 # This is a customized version of ~/.osx — http://mths.be/osx
 # Checkout http://secrets.blacktree.com for a extensive list of defaults

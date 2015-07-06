@@ -3,11 +3,14 @@
 # AJAlabs.com
 #
 # Homebrew install and updater script
-# v0.2
+# v0.3
 #
 # Homebrew
 # http://brew.sh/
 #
+
+# Load the includes variables and functions
+source includes.sh
 
 # Set counter to Zero
 count=0
@@ -33,9 +36,10 @@ fi
 
 # If Homebrew already exists, update brew and all packages
 if [ $count -eq 0 ]; then
-  echo -e "\n Checking for Homebrew updates"
-  echo -e " Please wait while things are brewing..."
+  echo -e "$txt_blue""\n Checking for Homebrew updates"
+  echo -e " Please wait while things are brewing...\n""$txt_reset"
   brew update && brew upgrade
+  #TODO: If the result is Already up-to-date, this should be output with green text.
 fi
 
 exit 0
