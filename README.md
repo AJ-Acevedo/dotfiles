@@ -28,7 +28,7 @@ NOTE: There are additional installer scripts in the `~/.dotfiles/init` directory
 
 ## Updating and adding VIM plugins
 
-To update the VIM plug-ins run the following commands from the .dotfiles root directory
+To update the VIM plug-ins, run the following commands from the .dotfiles root directory
 
 ```
 curl -Sso ~/.vim/autoload/pathogen.vim \
@@ -78,4 +78,4 @@ enjoy
 
 ## License
 
-[Copyright (C) 2013 AJ Acevedo](https://github.com/AJ-Acevedo/dotfiles/blob/master/LICENSE.md)
+[Copyright (C) 2013 - 2016 AJ Acevedo](https://github.com/AJ-Acevedo/dotfiles/blob/master/LICENSE.md)
