@@ -5,6 +5,9 @@
 # Initializer - One script to rule them all!!!
 # v0.1b
 #
+# TODO: This file should verify the OS type then source the OS specific defaults configuration scripts.
+# The initializer should eventually replace the Rakefile
+#
 
 # Load the includes variables and functions
 source includes.sh

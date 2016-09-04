@@ -16,6 +16,7 @@ source includes.sh
 count=0
 
 # Exit unless host OS is Mac OS X
+# TODO: This should become a function in includes.sh
 if [ `uname -s` != "Darwin" ]; then
   echo -e "\nThis script will only run on Mac OS X"
   echo "exiting"
@@ -31,7 +32,7 @@ fi
 
 # Install packages if Homewbrew was just installed
 if [ $count -eq 1 ]; then
-  brew install git-lfs node python readline sqlite tree wget
+  brew install git-lfs node openssl python readline sqlite tree wget
 fi
 
 # If Homebrew already exists, update brew and all packages
@@ -39,7 +40,7 @@ if [ $count -eq 0 ]; then
   echo -e "$txt_blue""\n Checking for Homebrew updates"
   echo -e " Please wait while things are brewing...\n""$txt_reset"
   brew update && brew upgrade
-  #TODO: If the result is Already up-to-date, this should be output with green text.
+  #TODO: If the result is Already up-to-date, there should be a green output message indicating brew is up-to-date.
 fi
 
 exit 0
