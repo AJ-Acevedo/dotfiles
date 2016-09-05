@@ -39,7 +39,7 @@ fi
 if [ $count -eq 0 ]; then
   echo -e "$txt_blue""\n Checking for Homebrew updates"
   echo -e " Please wait while things are brewing...\n""$txt_reset"
-  brew update && brew upgrade
+  brew update && brew upgrade && brew cleanup
   #TODO: If the result is Already up-to-date, there should be a green output message indicating brew is up-to-date.
 fi
 
