@@ -26,7 +26,7 @@ fi
 # Install RVM unless it already exists
 if ! rvm -v > /dev/null 2>&1; then
   echo -e "\n  Installing RVM...\n"
-  #TODO: insert RVM installer here
+  \curl -L https://get.rvm.io | bash -s stable --autolibs=enabled --ruby && source $HOME/.rvm/scripts/rvm && gem install bundler
   count=1
 fi
 

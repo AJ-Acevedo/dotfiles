@@ -31,8 +31,8 @@ NOTE: There are additional installer scripts in the `~/.dotfiles/init` directory
 To update the VIM plug-ins, run the following commands from the .dotfiles root directory
 
 ```
-curl -Sso ~/.vim/autoload/pathogen.vim \
-    https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 ```
 
 `git submodule foreach git pull origin master`

@@ -63,7 +63,7 @@ sudo pmset -a sms 0
 defaults write NSGlobalDomain KeyRepeat -int 0
 
 # Disable “natural” scrolling because it's stupid
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
