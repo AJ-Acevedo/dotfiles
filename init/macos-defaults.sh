@@ -28,10 +28,19 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "DragonFly"
-sudo scutil --set HostName "dragonfly"
-sudo scutil --set LocalHostName "dragonfly"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "dragonfly"
+
+echo -e "\nType the new Computer Name and press [enter]."
+echo -e "or\nLeave blank and press [enter] to not modify the Computer Name."
+
+read newName
+
+if [ $newName ]; then
+  sudo scutil --set ComputerName "$newName"
+  sudo scutil --set HostName "$newName"
+  sudo scutil --set LocalHostName "$newName"
+  sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$newName"
+fi
+
 
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
@@ -56,11 +65,17 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 sudo pmset -a sms 0
 
 ###############################################################################
-# Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
+# Trackpad, mouse, keyboard, and input                                        #
 ###############################################################################
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain KeyRepeat -int 1
+
+# Set a the delay before starting the repeat rate
+defaults write NSGlobalDomain InitialKeyRepeat -int 25
+
+# Enable press-and-hold for key repeat
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Disable “natural” scrolling because it's stupid
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
