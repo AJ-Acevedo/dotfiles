@@ -18,7 +18,7 @@ fi
 # Source global definitions (if any exist)
 #-------------------------------------------------------------
 
-# For Mac OS X
+# For macOS
 if [ -f /etc/bashrc ]; then
   . /etc/bashrc
 fi
@@ -137,7 +137,7 @@ export NODE_ENV=development
 
 
 ##############################################################
-# BEGIN - Mac OS X Specific configurations
+# BEGIN - macOS Specific configurations
 ##############################################################
 if [ `uname -s` == "Darwin" ]; then
 
@@ -162,7 +162,7 @@ export LSCOLORS=gxcxfxdxbxegedabagDxad
 
 fi
 ##############################################################
-# END - Mac OS X Specific configurations
+# END - macOS Specific configurations
 ##############################################################
 
 

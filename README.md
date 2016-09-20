@@ -1,11 +1,11 @@
 # AJ's dotfiles
 
-These dotfiles are a set of configuration files for Mac OS X and Linux, that make my life in front of the keyboard just a little bit easier.
-
+These dotfiles are a set of configuration files for macOS and Linux, that make my life in front of the keyboard just a little bit easier.
+  
 dotfiles are like a developer's toolbox.
 
-I am using Mac OS X 10.9 and my preferred Linux distribution is Debian.  
-Currently running Debian 7.4 (wheezy)
+I am using macOS Sierra 10.12 and my preferred Linux distribution is Debian.  
+Currently running Debian 7.11 (wheezy)
 
 
 For more information on dotfiles, checkout [dotfiles.github.io](http://dotfiles.github.io/)

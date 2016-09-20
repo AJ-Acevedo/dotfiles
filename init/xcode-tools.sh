@@ -9,9 +9,9 @@
 # Load the includes variables and functions
 source includes.sh
 
-# Exit unless host OS is Mac OS X
+# Exit unless host OS is macOS
 if [ `uname -s` != "Darwin" ]; then
-  echo -e "\nThis script will only run on Mac OS X"
+  echo -e "\nThis script will only run on macOS"
   echo "exiting"
   exit 1
 fi

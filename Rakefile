@@ -2,7 +2,7 @@ require 'rake'
 require 'erb'
 require 'rbconfig'
 
-# Verify if host OS is either Mac or Linux, otherwise exit
+# Verify if host OS is either macOS or Linux, otherwise exit
 @os = RbConfig::CONFIG['host_os']
 
 case
@@ -11,7 +11,7 @@ when @os.downcase.include?('linux')
 when @os.downcase.include?('darwin')
   @os = 'darwin'
 else
-  puts 'Mac OS X and Linux are the only supported platforms.'
+  puts 'macOS and Linux are the only supported platforms.'
   puts 'exiting...'
   exit
 end

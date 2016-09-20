@@ -15,10 +15,10 @@ source includes.sh
 # Set counter to Zero
 count=0
 
-# Exit unless host OS is Mac OS X
+# Exit unless host OS is macOS
 # TODO: This should become a function in includes.sh
 if [ `uname -s` != "Darwin" ]; then
-  echo -e "\nThis script will only run on Mac OS X"
+  echo -e "\nThis script will only run on macOS"
   echo "exiting"
   exit 1
 fi
