@@ -59,15 +59,14 @@ alias showip='ifconfig | grep "inet" | grep -v 127.0.0.1'
 #-------------------------------------------------------------
 # History
 #-------------------------------------------------------------
-# Ignore duplicates and lines that start with spaces
-export HISTCONTROL=ignoreboth
-
 # Set History Size to 50,000 line! Yeah buddy!
 export HISTSIZE=50000
 
 # Append to bash_history and do not overwrite
 shopt -s histappend
 
+# Ignore duplicates, erase duplicates and ignore lines that start with a space
+export HISTCONTROL=ignoreboth:erasedups
 
 #-------------------------------------------------------------
 # PS1 PROMPT 'user@hostname cwd (git_branch • )$ '

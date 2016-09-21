@@ -78,7 +78,7 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 25
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Disable “natural” scrolling because it's stupid
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
