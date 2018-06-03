@@ -145,6 +145,8 @@ if [ `uname -s` == "Darwin" ]; then
 # macOS specific aliases
 #-------------------------------------------------------------
 alias ls='ls -f1 -lh'
+alias python='python3'
+alias pip='pip3'
 
 #-------------------------------------------------------------
 # Set default Editor to TextMate
