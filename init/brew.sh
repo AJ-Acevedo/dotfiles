@@ -32,7 +32,7 @@ fi
 
 # Install packages if Homewbrew was just installed
 if [ $count -eq 1 ]; then
-  brew install git-lfs node openssl python readline sqlite tree wget
+  brew install arping git-lfs hping nmap node openssl python readline sqlite telnet tree wget
 fi
 
 # If Homebrew already exists, update brew and all packages
