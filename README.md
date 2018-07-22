@@ -4,8 +4,8 @@ These dotfiles are a set of configuration files for macOS and Linux, that make m
   
 dotfiles are like a developer's toolbox.
 
-I am using macOS Sierra 10.12 and my preferred Linux distribution is Debian.  
-Currently running Debian 7.11 (wheezy)
+I am using macOS High Sierra 10.13 and my preferred Linux distribution is Debian.  
+Currently running Debian 9 (Stretch)
 
 
 For more information on dotfiles, checkout [dotfiles.github.io](http://dotfiles.github.io/)
