@@ -144,7 +144,8 @@ if [ `uname -s` == "Darwin" ]; then
 #-------------------------------------------------------------
 # macOS specific aliases
 #-------------------------------------------------------------
-alias ls='ls -f1 -lh'
+#alias ls='ls -f1 -lh' THIS IS BROKEN in macOS 10.13
+alias ls='ls -alh'
 alias python='python3'
 alias pip='pip3'
 
@@ -162,6 +163,13 @@ export CLICOLOR=1
 export LSCOLORS=gxcxfxdxbxegedabagDxad
 
 fi
+
+#-------------------------------------------------------------
+# Set UTF 8 Locales
+#-------------------------------------------------------------
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 ##############################################################
 # END - macOS Specific configurations
 ##############################################################
