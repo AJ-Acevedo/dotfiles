@@ -2,7 +2,7 @@
 
 These dotfiles are a set of configuration files for macOS and Linux, that make my life in front of the keyboard just a little bit easier.
   
-dotfiles are like a developer's toolbox.
+dotfiles are like a programmers toolbox.
 
 I am using macOS High Sierra 10.13 and my preferred Linux distribution is Debian.  
 Currently running Debian 9 (Stretch)
@@ -50,6 +50,12 @@ When adding new VIM plug-ins, be sure to add them as git submodules
 'user@hostname cwd (git_branch • )$ '
 - Matching TextMate and vim themes
 - vim customization
+
+
+## Note
+
+All of the .dotfiles are symbolically linked from .dotfiles to the home directory via the Rakefile.
+Any of these files can also be manually linked using `ln -s ~/.dotfiles/ansible.cfg ~/.ansible.cfg`
 
 ## Uninstall
 
