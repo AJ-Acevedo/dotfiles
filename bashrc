@@ -55,6 +55,7 @@ alias .s='source ~/.bashrc'
 alias tocuh='touch'
 alias showip='ifconfig | grep "inet" | grep -v 127.0.0.1'
 alias fixRSA='ssh-keygen -f ~/.ssh/known_hosts -R'
+alias sshit="ssh -oHostKeyAlgorithms=ssh-rsa -o KexAlgorithms=diffie-hellman-group1-sha1 -o Ciphers=aes256-cbc,3des-cbc"
 
 
 #-------------------------------------------------------------
