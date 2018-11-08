@@ -73,6 +73,7 @@ def link_file(file)
       new_file.write ERB.new(File.read(file)).result(binding)
     end
   else
+    # Create the symbolic links in the user's home directory.
     puts "linking ~/.#{file}"
     system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
   end
