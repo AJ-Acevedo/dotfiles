@@ -153,6 +153,8 @@ else
   echo "Python is not installed"
 fi
 
+alias python='python3'
+alias pip='pip3'
 
 ##############################################################
 # BEGIN - macOS Specific configurations
@@ -165,8 +167,7 @@ if [ `uname -s` == "Darwin" ]; then
 #-------------------------------------------------------------
 #alias ls='ls -f1 -lh' THIS IS BROKEN in macOS 10.13
 alias ls='ls -alh'
-alias python='python3'
-alias pip='pip3'
+
 
 #-------------------------------------------------------------
 # Set default Editor to TextMate
