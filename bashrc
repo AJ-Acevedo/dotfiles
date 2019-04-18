@@ -146,15 +146,15 @@ export NODE_ENV=development
 #-------------------------------------------------------------
 
 # Prevent those pesky .pyc and __pycache__ files/folder from being created.
+# Also setup some python aliases
 #TODO: Fix conditional to not use which
 if which python >/dev/null; then
   export PYTHONDONTWRITEBYTECODE=1
+  alias python='python3'
+  alias pip='pip3'
 else
   echo "Python is not installed"
 fi
-
-alias python='python3'
-alias pip='pip3'
 
 ##############################################################
 # BEGIN - macOS Specific configurations
