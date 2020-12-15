@@ -2,8 +2,8 @@
 #
 # AJAlabs.com
 #
-# macOS Default - macOS Sierra 10.12
-# v0.5 beta
+# macOS Default - macOS Sierra 10.12 = 11.1
+# v0.6 beta
 #
 # This is a customized version of ~/.macos — http://mths.be/macos
 # Checkout http://secrets.blacktree.com for a extensive list of defaults
@@ -61,6 +61,7 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 # SSD-specific tweaks                                                         #
 ###############################################################################
 
+#NOTE: Disregard the warning generated on macOS 11.
 # Disable the sudden motion sensor as it’s not useful for SSDs
 sudo pmset -a sms 0
 

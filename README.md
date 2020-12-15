@@ -1,11 +1,10 @@
 # AJ's dotfiles
 
 These dotfiles are a set of configuration files for macOS and Linux, that make my life in front of the keyboard just a little bit easier.
-  
+
 dotfiles are like a programmers toolbox.
 
-I am using macOS High Sierra 10.13 and my preferred Linux distribution is Debian.  
-Currently running Debian 9 (Stretch)
+I am using macOS Big Sur 11.1 and my preferred Linux distributions are Debian and Ubuntu.
 
 
 For more information on dotfiles, checkout [dotfiles.github.io](http://dotfiles.github.io/)
@@ -23,7 +22,7 @@ rake install
 
 After the installation completes, open a new terminal window to see the changes take effect.
 
-NOTE: There are additional installer scripts in the `~/.dotfiles/init` directory that can be run as well. 
+NOTE: There are additional installer scripts in the `~/.dotfiles/init` directory that can be run as well.
 
 
 ## Updating and adding VIM plugins
@@ -84,4 +83,4 @@ enjoy
 
 ## License
 
-[Copyright (C) 2013 - 2016 AJ Acevedo](https://github.com/AJ-Acevedo/dotfiles/blob/master/LICENSE.md)
+[Copyright (C) 2013 - 2020 AJ Acevedo](https://github.com/AJ-Acevedo/dotfiles/blob/master/LICENSE.md)
