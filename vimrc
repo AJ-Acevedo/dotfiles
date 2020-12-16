@@ -41,7 +41,7 @@ set softtabstop=2
 set ruler
 
 " Enable mouse use in all modes
-set mouse=a
+set mouse=v
 
 " Ignore case when searching unless mixed case expressions
 set ignorecase
