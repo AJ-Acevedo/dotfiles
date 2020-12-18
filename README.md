@@ -4,7 +4,7 @@ These dotfiles are a set of configuration files for macOS and Linux, that make m
 
 dotfiles are like a programmers toolbox.
 
-I am using macOS Big Sur 11.1 and my preferred Linux distributions are Debian and Ubuntu.
+I am using macOS Big Sur 11.1 and my preferred Linux distributions are Debian and Ubuntu 20.04.
 
 
 For more information on dotfiles, checkout [dotfiles.github.io](http://dotfiles.github.io/)
