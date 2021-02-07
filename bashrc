@@ -146,21 +146,30 @@ export NODE_ENV=development
 #-------------------------------------------------------------
 
 # Prevent those pesky .pyc and __pycache__ files/folder from being created.
+export PYTHONDONTWRITEBYTECODE=1
+
 # Also setup some python aliases
 #TODO: Fix conditional to not use which
-if which python3 >/dev/null; then
-  export PYTHONDONTWRITEBYTECODE=1
-  alias python='python3'
-  alias pip='pip3'
-else
-  echo "Python is not installed"
-fi
+
+#if which python3 >/dev/null; then
+#  export PYTHONDONTWRITEBYTECODE=1
+#  alias python='python3'
+#  alias pip='pip3'
+#else
+#  echo "Python is not installed"
+#fi
+
+# Required for pyenv - https://github.com/pyenv/pyenv
+eval "$(pyenv init -)"
+export PYENV_VERSION=3.9.1
 
 ##############################################################
 # BEGIN - macOS Specific configurations
 ##############################################################
 if [ `uname -s` == "Darwin" ]; then
 
+# Silence the bash deprecation warning
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 #-------------------------------------------------------------
 # macOS specific aliases

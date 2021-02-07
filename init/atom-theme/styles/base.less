@@ -1,0 +1,128 @@
+@import "syntax-variables";
+
+atom-text-editor {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+}
+
+atom-text-editor .gutter {
+  background-color: @syntax-gutter-background-color;
+  color: @syntax-gutter-text-color;
+}
+
+atom-text-editor .gutter .line-number.cursor-line {
+  background-color: @syntax-gutter-background-color-selected;
+  color: @syntax-gutter-text-color-selected;
+}
+
+atom-text-editor .gutter .line-number.cursor-line-no-selection {
+  color: @syntax-gutter-text-color-selected;
+}
+
+atom-text-editor .wrap-guide {
+  color: @syntax-wrap-guide-color;
+}
+
+atom-text-editor .indent-guide {
+  color: @syntax-indent-guide-color;
+}
+
+atom-text-editor .invisible-character {
+  color: @syntax-invisible-character-color;
+}
+
+atom-text-editor.is-focused .cursor {
+  border-color: @syntax-cursor-color;
+}
+
+atom-text-editor.is-focused .selection .region {
+  background-color: @syntax-selection-color;
+}
+
+atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-editor.is-focused .line.cursor-line {
+  background-color: #333435;
+}
+
+.syntax--source {
+  background-color: #232323;
+}
+
+.syntax--comment {
+  font-style: italic;
+  color: #BC9458;
+}
+
+.syntax--keyword, .syntax--storage {
+  color: #CC7833;
+}
+
+.syntax--entity.syntax--name.syntax--function, .syntax--keyword.syntax--other.syntax--name-of-parameter.syntax--objc {
+  color: #FFC66D;
+}
+
+.syntax--entity.syntax--name {
+  color: #FFFFFF;
+}
+
+.syntax--constant.syntax--numeric {
+  color: #A5C261;
+}
+
+.syntax--variable.syntax--language, .syntax--variable.syntax--other {
+  color: #D0D0FF;
+}
+
+.syntax--constant {
+  color: #6D9CBE;
+}
+
+.syntax--variable.syntax--other.syntax--constant {
+  color: #DA4939;
+}
+
+.syntax--constant.syntax--language {
+  color: #6E9CBE;
+}
+
+.syntax--string {
+  color: #A5C261;
+}
+
+.syntax--support.syntax--function {
+  color: #E0DE5F;
+}
+
+.syntax--support.syntax--type {
+  color: #6E9CBE;
+}
+
+.syntax--support.syntax--constant {
+  color: #A5C261;
+}
+
+.syntax--meta.syntax--tag, .syntax--declaration.syntax--tag, .syntax--entity.syntax--name.syntax--tag, .syntax--entity.syntax--other.syntax--attribute-name {
+  color: #E8BF6A;
+}
+
+.syntax--invalid {
+  color: #FFFFFF;
+  background-color: #990000;
+}
+
+.syntax--constant.syntax--character.syntax--escaped, .syntax--constant.syntax--character.syntax--escape, .syntax--string .syntax--source, .syntax--string .syntax--source.syntax--ruby {
+  color: #519F50;
+}
+
+.syntax--markup.syntax--inserted {
+  color: #E6E1DC;
+  background-color: #144212;
+}
+
+.syntax--markup.syntax--deleted {
+  color: #E6E1DC;
+  background-color: #660000;
+}
+
+.syntax--meta.syntax--diff.syntax--header, .syntax--meta.syntax--separator.syntax--diff, .syntax--meta.syntax--diff.syntax--index, .syntax--meta.syntax--diff.syntax--range {
+  background-color: #2F33AB;
+}
