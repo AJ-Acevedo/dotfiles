@@ -176,7 +176,7 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 #-------------------------------------------------------------
 #alias ls='ls -f1 -lh' THIS IS BROKEN in macOS 10.13
 alias ls='ls -alh'
-
+alias myip='ipconfig getifaddr en0'
 
 #-------------------------------------------------------------
 # Set default Editor to TextMate
