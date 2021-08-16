@@ -2,9 +2,9 @@
 
 These dotfiles are a set of configuration files for macOS and Linux, that make my life in front of the keyboard just a little bit easier.
 
-dotfiles are like a programmers toolbox.
+dotfiles are like a programmer's toolbox.
 
-I am using macOS Big Sur 11.1 and my preferred Linux distributions are Debian and Ubuntu 20.04.
+I am using macOS Big Sur 11.x and my preferred Linux distributions are Debian and Ubuntu 20.04.
 
 
 For more information on dotfiles, checkout [dotfiles.github.io](http://dotfiles.github.io/)
@@ -45,7 +45,7 @@ When adding new VIM plug-ins, be sure to add them as git submodules
 
 - Tab auto-completion for Git and Grunt JS
 - Custom list of git config aliases and configurations
-- Add a Git repo's branch name to the PS1 prompt with red, yellow and green status indicators:
+- Add a Git repo's branch name to the PS1 prompt with red, yellow, and green status indicators:
 'user@hostname cwd (git_branch • )$ '
 - Matching TextMate and vim themes
 - vim customization
@@ -59,7 +59,7 @@ Any of these files can also be manually linked using `ln -s ~/.dotfiles/ansible.
 ## Uninstall
 
 To remove the dotfile configs, run the following commands.  
-Be certain to double check the contents of the files before removing so you don't lose custom settings.
+Be certain to double check the contents of the files before removing them so you don't lose your custom settings.
 
 ```
 unlink ~/.bash_profile  
@@ -78,9 +78,19 @@ Then open a new terminal window to see the changes take effect.
 
 
 Feel free to clone, modify, share, and use these dotfiles as your own.  
-enjoy
-[AJ](https://twitter.com/AJ_Acevedo)
 
 ## License
 
-[Copyright (C) 2013 - 2020 AJ Acevedo](https://github.com/AJ-Acevedo/dotfiles/blob/master/LICENSE.md)
+[Copyright (C) 2013 - 2021 AJ Acevedo](https://github.com/AJ-Acevedo/dotfiles/blob/master/LICENSE.md)
+
+## Author
+
+**AJ Acevedo**
+
+- [twitter @aj_acevedo](https://twitter.com/aj_acevedo)
+- [GitHub @AJ-Acevedo](https://github.com/AJ-Acevedo)
+- [LinkedIn - AJ Acevedo](http://www.linkedin.com/in/acevedoaj)
+- [AJAcevedo.com](https://AJAcevedo.com)
+- [AJAlabs.com](https://AJAlabs.com)
+- [IRC libera.chat Channel #AJAlabs](ircs://irc.libera.chat:6697/#AJAlabs)
+- [matrix.org @ajalabs:matrix.org](https://matrix.to/#/@ajalabs:matrix.org)  
