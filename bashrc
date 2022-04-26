@@ -179,11 +179,11 @@ alias ls='ls -alh'
 alias myip='ipconfig getifaddr en0'
 
 #-------------------------------------------------------------
-# Set default Editor to TextMate
+# Set default Editor to VS Code
 #-------------------------------------------------------------
-export EDITOR="$HOME/bin/mate -w"
-export GIT_EDITOR="$HOME/bin/mate -w"
-export VISUAL="$HOME/bin/mate -w"
+export EDITOR="code --wait"
+export GIT_EDITOR="$EDITOR"
+export VISUAL="$EDITOR"
 
 #-------------------------------------------------------------
 # CLI COLOR
