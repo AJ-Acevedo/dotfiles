@@ -161,7 +161,7 @@ export PYTHONDONTWRITEBYTECODE=1
 
 # Required for pyenv - https://github.com/pyenv/pyenv
 eval "$(pyenv init -)"
-export PYENV_VERSION=3.9.1
+export PYENV_VERSION=3.10.4
 
 ##############################################################
 # BEGIN - macOS Specific configurations
