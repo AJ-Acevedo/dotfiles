@@ -99,7 +99,7 @@ shopt -s checkwinsize
 #-------------------------------------------------------------
 
 # Prepend Homebrew's PATH before $PATH
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 # Add ~/bin
 export PATH=$PATH:$HOME/bin
