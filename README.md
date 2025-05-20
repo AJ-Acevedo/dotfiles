@@ -4,7 +4,7 @@ These dotfiles are a set of configuration files for macOS and Linux, that make m
 
 dotfiles are like a programmer's toolbox.
 
-I am using macOS Monterey 12.x and my preferred Linux distributions are Debian and Ubuntu 22.04.
+I am using macOS 15.x and my preferred Linux distributions are Debian and Ubuntu.
 
 
 For more information on dotfiles, checkout [dotfiles.github.io](http://dotfiles.github.io/)
@@ -81,7 +81,7 @@ Feel free to clone, modify, share, and use these dotfiles as your own.
 
 ## License
 
-[Copyright (C) 2013 - 2022 AJ Acevedo](https://github.com/AJ-Acevedo/dotfiles/blob/master/LICENSE.md)
+[Copyright (C) 2013 - 2025 AJ Acevedo](https://github.com/AJ-Acevedo/dotfiles/blob/master/LICENSE.md)
 
 ## Author
 
@@ -92,5 +92,3 @@ Feel free to clone, modify, share, and use these dotfiles as your own.
 - [LinkedIn - AJ Acevedo](http://www.linkedin.com/in/acevedoaj)
 - [AJAcevedo.com](https://AJAcevedo.com)
 - [AJAlabs.com](https://AJAlabs.com)
-- [IRC libera.chat Channel #AJAlabs](ircs://irc.libera.chat:6697/#AJAlabs)
-- [matrix.org @ajalabs:matrix.org](https://matrix.to/#/@ajalabs:matrix.org)  

@@ -2,8 +2,8 @@
 #
 # AJAlabs.com
 #
-# macOS Default - macOS Sierra 10.12 = 11.1
-# v0.6 beta
+# macOS Default - macOS 15.x
+# v0.7 beta
 #
 # This is a customized version of ~/.macos — http://mths.be/macos
 # Checkout http://secrets.blacktree.com for a extensive list of defaults
@@ -142,16 +142,16 @@ defaults write com.apple.dashboard mcx-disabled -bool true
 ###############################################################################
 
 # Set Safari’s home page to `about:blank` for faster loading
-defaults write com.apple.Safari HomePage -string "about:blank"
+#defaults write com.apple.Safari HomePage -string "about:blank"
 
 # Prevent Safari from opening ‘safe’ files automatically after downloading
-defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
+#defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 
 # Allow hitting the Backspace key to go to the previous page in history
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool true
+#defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool true
 
 # Enable Safari’s debug menu
-defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+#defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
 
 ###############################################################################
@@ -186,18 +186,6 @@ defaults write -g NSAutomaticDashSubstitutionEnabled 0
 # Disable Smart Quotes
 defaults write -g NSAutomaticQuoteSubstitutionEnabled 0
 
-###############################################################################
-# TextMate 2.0                                                                #
-###############################################################################
-
-# Enable Font Smoothing always on
-defaults write com.macromates.TextMate.preview fontSmoothing 1
-
-# Set font size to 13
-#defaults write com.macromates.textmate OakTextViewNormalFontSize -int 13
-
-# Set font to Monaco
-#defaults write com.macromates.textmate OakTextViewNormalFontName -string "Monaco"
 
 echo ""
 echo "Oh dip! it worked! Restart/Log Out to apply the changes."
