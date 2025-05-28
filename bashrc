@@ -160,8 +160,9 @@ export PYTHONDONTWRITEBYTECODE=1
 #fi
 
 # Required for pyenv - https://github.com/pyenv/pyenv
-#eval "$(pyenv init -)"
-#export PYENV_VERSION=3.10.4
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"
 
 ##############################################################
 # BEGIN - macOS Specific configurations
