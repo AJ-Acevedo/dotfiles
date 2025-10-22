@@ -26,7 +26,7 @@ fi
 # Install Homebrew unless it already exists
 if ! brew -v > /dev/null 2>&1; then
   echo -e "\n  Installing Homebrew...\n"
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   count=1
 fi
 

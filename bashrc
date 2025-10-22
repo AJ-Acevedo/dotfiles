@@ -110,30 +110,6 @@ PATH=$PATH:$HOME/.rvm/bin
 # Clean up duplicates in $PATH and remove trailing :
 PATH=$(echo -n $PATH | awk -v RS=: -v ORS=: '!($0 in a) {a[$0]; print}' | sed "s/\(.*\).\{1\}/\1/")
 
-export NVM_DIR="$HOME/.nvm"
-
-# Lazy load NVM - only loads when you first use nvm/node/npm
-nvm() {
-  unset -f nvm
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-  nvm "$@"
-}
-
-# Auto-trigger NVM load when using node
-node() {
-  unset -f node
-  nvm &> /dev/null
-  node "$@"
-}
-
-# Auto-trigger NVM load when using npm
-npm() {
-  unset -f npm
-  nvm &> /dev/null
-  npm "$@"
-}
-
 
 #-------------------------------------------------------------
 # TAB Auto-Completion
@@ -162,9 +138,7 @@ export NODE_ENV=development
 #-------------------------------------------------------------
 
 # Load RVM into a shell session *as a function* if it exists
-if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
-  source "$HOME/.rvm/scripts/rvm"
-fi
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 
 #-------------------------------------------------------------
@@ -186,12 +160,9 @@ export PYTHONDONTWRITEBYTECODE=1
 #fi
 
 # Required for pyenv - https://github.com/pyenv/pyenv
-# Only load if pyenv is actually installed
-if [[ -d "$HOME/.pyenv" ]]; then
-  export PYENV_ROOT="$HOME/.pyenv"
-  [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init - bash)"
-fi
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"
 
 ##############################################################
 # BEGIN - macOS Specific configurations
