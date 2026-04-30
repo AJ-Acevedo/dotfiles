@@ -162,12 +162,12 @@ export PYTHONDONTWRITEBYTECODE=1
 # Required for pyenv - https://github.com/pyenv/pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - bash)"
+command -v pyenv >/dev/null && eval "$(pyenv init - bash)"
 
 ##############################################################
 # BEGIN - macOS Specific configurations
 ##############################################################
-if [ `uname -s` == "Darwin" ]; then
+if [ "$(uname -s)" == "Darwin" ]; then
 
 # Silence the bash deprecation warning
 export BASH_SILENCE_DEPRECATION_WARNING=1
@@ -208,7 +208,7 @@ export LANG=en_US.UTF-8
 ##############################################################
 # BEGIN - Linux Specific configurations
 ##############################################################
-if [ `uname -s` == "Linux" ]; then
+if [ "$(uname -s)" == "Linux" ]; then
 
 #-------------------------------------------------------------
 # Linux specific aliases

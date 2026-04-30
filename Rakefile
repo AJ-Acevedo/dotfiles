@@ -20,7 +20,7 @@ end
 desc "Setting up dotfiles in user's home directory"
 task :install do
   replace_all = false
-  files = Dir['*'] - %w[config init LICENSE.md Rakefile README.md]
+  files = Dir['*'] - %w[claude config init LICENSE.md Rakefile README.md]
   files.each do |file|
     system %Q{mkdir -p "$HOME/.#{File.dirname(file)}"} if file =~ /\//
     if File.exist?(File.join(ENV['HOME'], ".#{file.sub(/\.erb$/, '')}"))
@@ -46,6 +46,7 @@ task :install do
       link_file(file)
     end
   end
+  link_claude_files
   make_bin
   source_files
 end
@@ -75,7 +76,36 @@ def link_file(file)
   else
     # Create the symbolic links in the user's home directory.
     puts "linking ~/.#{file}"
-    system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
+    system %Q{ln -s "#{Dir.pwd}/#{file}" "$HOME/.#{file}"}
+  end
+end
+
+def link_claude_files
+  # Symlink individual files into ~/.claude without replacing the whole directory,
+  # since Claude Code writes runtime state (sessions, history, etc.) there.
+  claude_files = %w[statusline-command.sh]
+  system %Q{mkdir -p "$HOME/.claude"}
+  claude_files.each do |file|
+    target = File.join(ENV['HOME'], '.claude', file)
+    source = File.join(Dir.pwd, 'claude', file)
+    if File.exist?(target) || File.symlink?(target)
+      if File.symlink?(target) && File.readlink(target) == source
+        puts "identical ~/.claude/#{file}"
+      else
+        print "overwrite ~/.claude/#{file}? [y]es, [n]o "
+        case $stdin.gets.chomp
+        when 'y'
+          system %Q{rm -f "#{target}"}
+          system %Q{ln -s "#{source}" "#{target}"}
+          puts "linking ~/.claude/#{file}"
+        else
+          puts "skipping ~/.claude/#{file}"
+        end
+      end
+    else
+      puts "linking ~/.claude/#{file}"
+      system %Q{ln -s "#{source}" "#{target}"}
+    end
   end
 end
 

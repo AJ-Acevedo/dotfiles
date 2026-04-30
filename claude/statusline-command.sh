@@ -10,6 +10,7 @@ model=$(echo "$input" | jq -r '.model.display_name // ""')
 effort=$(echo "$input" | jq -r '.effort.level // ""')
 total_in=$(echo "$input" | jq -r '.context_window.total_input_tokens // 0')
 total_out=$(echo "$input" | jq -r '.context_window.total_output_tokens // 0')
+five_hour_pct=$(echo "$input" | jq -r '.rate_limits.five_hour.used_percentage // empty')
 week_pct=$(echo "$input" | jq -r '.rate_limits.seven_day.used_percentage // empty')
 
 # --- ANSI color helpers ---
@@ -69,7 +70,15 @@ else
   tokens_part=""
 fi
 
-# --- 6. Tokens remaining this week (7-day rate limit) ---
+# --- 6. 5-hour usage percentage ---
+if [ -n "$five_hour_pct" ]; then
+  five_hour_used=$(awk "BEGIN { printf \"%.0f\", $five_hour_pct }")
+  five_hour_part="5-Hour: ${five_hour_used}%"
+else
+  five_hour_part=""
+fi
+
+# --- 7. Tokens remaining this week (7-day rate limit) ---
 if [ -n "$week_pct" ]; then
   remaining_pct=$(awk "BEGIN { printf \"%.0f\", 100 - $week_pct }")
   week_part="Week: ${remaining_pct}% Left"
@@ -85,6 +94,7 @@ parts+=("${dir_part}")
 [ -n "$model_part" ] && parts+=("${model_part}")
 [ -n "$effort_part" ] && parts+=("${effort_part}")
 [ -n "$tokens_part" ] && parts+=("${tokens_part}")
+[ -n "$five_hour_part" ] && parts+=("${five_hour_part}")
 [ -n "$week_part" ] && parts+=("${week_part}")
 
 # Join with separator
