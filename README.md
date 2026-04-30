@@ -49,6 +49,7 @@ When adding new VIM plug-ins, be sure to add them as git submodules
 'user@hostname cwd (git_branch • )$ '
 - Matching TextMate and vim themes
 - vim customization
+- Custom Claude Code Status Line
 
 
 ## Note
